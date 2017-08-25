@@ -7,6 +7,6 @@ HuaTaiCsv = """ID,華語對譯,英文,台語羅馬字,台語漢字
 3,媽媽,mother,a-bo2,阿母
 """
 f = io.StringIO(HuaTaiCsv)
-reader = csv.reader(f, delimiter=',')
+reader = csv.DictReader(f, delimiter=',')
 for row in reader:
-    print('\t'.join(row))
+    print(row)
